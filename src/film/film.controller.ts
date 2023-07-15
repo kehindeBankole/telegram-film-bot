@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Res } from '@nestjs/common';
 import { FilmService } from './film.service';
 
 @Controller('film')
@@ -7,6 +7,6 @@ export class FilmController {
 
   @Get()
   async startBot() {
-    this.filmService.startBot();
+    return this.filmService.startBot();
   }
 }
